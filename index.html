@@ -8,6 +8,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Daffa Portfolio</title>
+    <script>
+      if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- Header Start -->
@@ -15,31 +22,66 @@
       <div class="container" data-aos="flip-up">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="#home" class="text-transparent font-bold text-lg block py-6 uppercase bg-gradient-to-r from-fuchsia-600 to-violet-500 bg-clip-text">Daffa <span class="text-orange-500 font-bold">.</span></a>
+            <a
+              href="#home"
+              class="text-transparent font-bold text-lg block py-6 uppercase transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 bg-gradient-to-r from-fuchsia-600 to-violet-500 bg-clip-text dark:bg-gradient-to-r dark:from-lime-400 dark:to-emerald-500 ease"
+              >Daffa <span class="text-orange-500 font-bold">.</span></a
+            >
           </div>
           <div class="flex items-center px-4">
             <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="w-[20px] h-[2px] my-2 mx-1 block bg-ungu animate-pulse transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="w-[20px] h-[2px] my-2 mx-1 block bg-ungu animate-pulse transition duration-300 ease-in-out origin-top-left dark:bg-ijo"></span>
               <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="w-[20px] h-[2px] my-2 mx-1 block bg-ungu animate-pulse transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="w-[20px] h-[2px] my-2 mx-1 block bg-ungu animate-pulse transition duration-300 ease-in-out origin-top-left dark:bg-ijo"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none">
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg shadow-ungu rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none dark:bg-slate-900 dark:shadow-ijo lg:dark:bg-transparent"
+            >
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu">Home</a>
+                  <a href="#home" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu dark:text-white group-hover:dark:text-ijo">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu">About</a>
+                  <a href="#about" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu dark:text-white group-hover:dark:text-ijo">About</a>
                 </li>
                 <li class="group">
-                  <a href="#resume" class="text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu">Resume</a>
+                  <a href="#resume" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu dark:text-white group-hover:dark:text-ijo">Resume</a>
                 </li>
                 <li class="group">
-                  <a href="#portfolio" class="text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu">Portfolio</a>
+                  <a href="#portfolio" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu dark:text-white group-hover:dark:text-ijo"
+                    >Portfolio</a
+                  >
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu">Contact</a>
+                  <a href="#contact" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 text-base text-zinc-700 font-bold py-2 mx-8 flex group-hover:text-ungu dark:text-white group-hover:dark:text-ijo">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 dark:fill-white" width="20">
+                        <path
+                          d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                        />
+                      </svg>
+                    </span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 dark:fill-white" width="20">
+                        <path
+                          fill-rule="evenodd"
+                          d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -50,27 +92,27 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-slate-900">
       <div class="container" data-aos="fade-up">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-ungu md:text-xl">Hello There 🙌, Im <span class="block font-bold text-hitam text-3xl mt-1 lg:text-4xl">Daffa Naufal Fakhrizi</span></h1>
-            <h2 class="font-medium text-hitam text-lg mb-3 lg:text-2xl">Web Developer | Programmer 💻</h2>
-            <p class="font-medium text-slate-500 mb-10 leading-relaxed">I Make Website #HTML #PHP #Laravel #Bootstrap #Tailwindcss</p>
+            <h1 class="text-base font-semibold text-ungu md:text-xl dark:text-ijo">Hello There 🙌, Im <span class="block font-bold text-hitam text-3xl mt-1 lg:text-4xl dark:text-white">Daffa Naufal Fakhrizi</span></h1>
+            <h2 class="font-medium text-hitam text-lg mb-3 lg:text-2xl dark:text-slate-300">Web Developer | Programmer 💻</h2>
+            <p class="font-medium text-slate-500 mb-10 leading-relaxed dark:text-slate-300">#PHP #Laravel #Javascript #Tailwindcss #Bootstrap</p>
             <a
               href="#contact"
               class="relative items-center justify-center inline-block px-8 py-3 overflow-hidden text-base font-semibold text-white rounded-full shadow-2xl group hover:shadow-lg hover:opacity-95 transition duration-300 ease-in-out"
             >
-              <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+              <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 dark:bg-green-600 rounded-full blur-md ease"></span>
               <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
-                <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
-                <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
+                <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 dark:bg-lime-500 rounded-full blur-md"></span>
+                <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 dark:bg-emerald-400 rounded-full blur-md"></span>
               </span>
               <span class="relative text-white">Contact Me</span>
             </a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10 lg:mt-9 lg:right-0">
+            <div class="relative mt-10 lg:mt-9 lg:right-0 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110">
               <img src="./public/img/avatar.png" alt="Daffa Naufal Fakhrizi" class="max-w-full mx-auto drop-shadow-xl hover:drop-shadow-2xl" width="500px" height="500px" />
             </div>
           </div>
@@ -80,23 +122,27 @@
     <!-- Hero Section End -->
 
     <!-- About  start-->
-    <section id="about" class="pt-36 pb-32 bg-slate-100">
+    <section id="about" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
       <div class="container" data-aos="fade-up">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold text-ungu uppercase text-lg mb-3">About Me</h4>
-            <h2 class="font-bold text-hitam text-3xl mb-5 max-w-xl lg:text-4xl">Who Am I?</h2>
-            <p class="font-medium text-base text-slate-500 lg:text-lg">
+            <h4 class="font-bold text-ungu uppercase text-lg mb-3 dark:text-ijo">About Me</h4>
+            <h2 class="font-bold text-hitam text-3xl mb-5 max-w-xl lg:text-4xl dark:text-white">Who Am I?</h2>
+            <p class="font-medium text-base text-slate-500 lg:text-lg dark:text-slate-300">
               Hey, my name is Daffa Naufal Fakhrizi im a fresh graduate from the informatics engineering at the Indonesian Computer University. Have an interest in having a career in technology such as Website Development and now i love
               being a front end developer. i like photography, music, basketball, and i’m always curious to learn more when it comes to new technologies and creative coding.
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h4 class="font-semibold text-dark text-3xl mb-4 lg:text-4xl lg:pt-10">Connect With Me</h4>
-            <p class="font-medium text-base text-slate-500 mb-6 lg:text-lg">Here are my social media account, let's connect and be friends 🙌</p>
+            <h4 class="font-semibold text-hitam text-3xl mb-4 lg:text-4xl lg:pt-10 dark:text-white">Connect With Me</h4>
+            <p class="font-medium text-base text-slate-500 mb-6 lg:text-lg dark:text-slate-300">Here are my social media account, let's connect and be friends 🙌</p>
             <div class="flex items-center">
               <!-- Linked in  -->
-              <a href="https://www.linkedin.com/in/daffanaufalf/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+              <a
+                href="https://www.linkedin.com/in/daffanaufalf/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+              >
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" class="fill-current">
                   <title>LinkedIn</title>
                   <path
@@ -107,7 +153,11 @@
               <!-- Linked in -->
 
               <!-- Instagram  -->
-              <a href="https://www.instagram.com/daffanaufalf" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+              <a
+                href="https://www.instagram.com/daffanaufalf"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+              >
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" class="fill-current">
                   <title>Instagram</title>
                   <path
@@ -118,7 +168,11 @@
               <!-- Instagram -->
 
               <!-- twitter -->
-              <a href="https://twitter.com/Daffanaufalf" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+              <a
+                href="https://twitter.com/Daffanaufalf"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+              >
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" class="fill-current">
                   <title>Twitter</title>
                   <path
@@ -129,7 +183,11 @@
               <!-- twitter -->
 
               <!-- github  -->
-              <a href="https://github.com/Depakss" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+              <a
+                href="https://github.com/Depakss"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+              >
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" class="fill-current">
                   <title>GitHub</title>
                   <path
@@ -146,36 +204,36 @@
     <!-- About end-->
 
     <!-- Resume Start -->
-    <section id="resume" class="pt-36 pb-32">
+    <section id="resume" class="pt-36 pb-32 dark:bg-slate-900">
       <div class="container" data-aos="fade-up">
         <div class="flex flex-wrap">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-ungu mb-2">Resume</h4>
+            <h4 class="font-semibold text-lg text-ungu mb-2 dark:text-ijo">Resume</h4>
             <h2 class="font-bold text-hitam text-3xl mb-4"></h2>
           </div>
         </div>
 
         <div class="w-full px-4 flex flex-wrap justify-center">
           <div class="mb-12 p-4 md:w-1/2" data-aos="flip-left" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <h4 class="font-semibold text-dark text-3xl mb-4 text-center lg:text-4xl lg:pt-10">Education</h4>
+            <h4 class="font-semibold text-dark text-3xl mb-4 text-center lg:text-4xl lg:pt-10 dark:text-white">Education</h4>
             <ul class="list-inside">
-              <li class="bg-gradient-to-r from-fuchsia-600 to-indigo-600 shadow-md rounded-md p-4">
-                <span class="font-bold text-slate-50 text-xl">Bachelor Degree</span>
-                <p class="font-medium text-base text-slate-100 drop-shadow-md">Indonesian Computer University | 2018 - 2022</p>
-                <p class="font-medium text-base text-slate-100">Faculty of Engineering & Computer Science</p>
-                <p class="font-medium text-base text-slate-100">Informatics Engineering</p>
-                <p class="font-medium text-base text-slate-100">GPA : 3.22</p>
+              <li class="bg-gradient-to-r from-fuchsia-600 to-indigo-600 dark:from-lime-400 dark:to-emerald-300 shadow-md rounded-md p-4">
+                <span class="font-bold text-slate-50 text-xl dark:text-slate-800">Bachelor Degree</span>
+                <p class="font-medium text-base text-slate-100 drop-shadow-md dark:text-slate-800">Indonesian Computer University | 2018 - 2022</p>
+                <p class="font-medium text-base text-slate-100 dark:text-slate-800">Faculty of Engineering & Computer Science</p>
+                <p class="font-medium text-base text-slate-100 dark:text-slate-800">Informatics Engineering</p>
+                <p class="font-medium text-base text-slate-100 dark:text-slate-800">GPA : 3.22</p>
               </li>
             </ul>
           </div>
           <div class="mb-12 p-4 md:w-1/2" data-aos="flip-right" data-aos-easing="ease-in-sine" data-aos-duration="1000">
-            <h4 class="font-semibold text-dark text-3xl mb-4 text-center lg:text-4xl lg:pt-10">Experience</h4>
+            <h4 class="font-semibold text-dark text-3xl mb-4 text-center lg:text-4xl lg:pt-10 dark:text-white">Experience</h4>
             <ul class="list-inside">
-              <li class="bg-gradient-to-l from-fuchsia-600 to-indigo-600 shadow-md rounded-md p-4">
-                <span class="font-bold text-slate-50 text-xl">Web Developer / Internship</span>
-                <p class="font-medium text-base text-slate-100 drop-shadow-md">Perumda Air Minum Tirta Raharja Pusat | Sep 2021 - Oct 2021</p>
+              <li class="bg-gradient-to-l from-fuchsia-600 to-indigo-600 dark:from-lime-400 dark:to-emerald-300 shadow-md rounded-md p-4">
+                <span class="font-bold text-slate-50 text-xl dark:text-slate-800">Web Developer / Internship</span>
+                <p class="font-medium text-base text-slate-100 drop-shadow-md dark:text-slate-800">Perumda Air Minum Tirta Raharja Pusat | Sep 2021 - Oct 2021</p>
 
-                <p class="font-medium text-base text-slate-100 mt-2">
+                <p class="font-medium text-base text-slate-100 mt-2 dark:text-slate-800">
                   Responsible for creating Employee Recruitment web applications, Designing and helping companies reduce documents and emails, Assisting and being responsible for making website composition appearance attractive and user
                   friendly
                 </p>
@@ -188,48 +246,85 @@
     <!-- Resume end -->
 
     <!-- Portfolio start -->
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container" data-aos="fade-up">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-ungu mb-2">Portfolio</h4>
-            <h2 class="font-bold text-hitam text-3xl mb-4">Some of my best work</h2>
+            <h4 class="font-semibold text-lg text-ungu mb-2 dark:text-ijo">Portfolio</h4>
+            <h2 class="font-bold text-hitam text-3xl mb-4 dark:text-white">Some of my best work</h2>
             <p class="font-medium text-md text-slate-500"></p>
           </div>
         </div>
 
         <div class="w-full px-4 flex flex-wrap justify-center">
           <div class="mb-12 p-4 md:w-1/2" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
-            <div class="rounded-md shadow-md overflow-hidden hover:opacity-80 ring-ungu hover:ring-4 cursor-pointer"">
+            <div onclick="toggleModal('modal-id')" class="rounded-md shadow-md overflow-hidden hover:opacity-80 ring-ungu hover:ring-4 cursor-pointer">
               <img src="./public/img/project1.jpg" alt="abcd" width="w-full" />
             </div>
-            <h3 class="font-semibold text-hitam text-xl mt-5 mb-3">Final Project | Development Of Healthy Diet Food Recommendation Application</h3>
-            <p class="font-medium text-base text-slate-500">Tools : Visual Studio Code, Postman</p>
-            <p class="font-medium text-base text-slate-500">Languages : HTML, CSS, Tailwind CSS, Bootstrap, PHP, Laravel, MySQL</p>
+
+            <h3 class="font-semibold text-hitam text-xl mt-5 mb-3 dark:text-ijo text-center">Final Project | Development Of Healthy Diet Food Recommendation Application</h3>
+            <p class="font-medium text-base text-slate-500 dark:text-white">Tools : Visual Studio Code, Postman</p>
+            <p class="font-medium text-base text-slate-500 dark:text-white">Languages : HTML, CSS, Tailwind CSS, Bootstrap, PHP, Laravel, MySQL</p>
           </div>
 
           <div class="mb-12 p-4 md:w-1/2" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
             <div class="rounded-md shadow-md overflow-hidden hover:opacity-80 ring-ungu hover:ring-4 cursor-pointer">
               <img src="./public/img/project2.jpg" alt="abcd" width="w-full" />
             </div>
-            <h3 class="font-semibold text-hitam text-xl mt-5 mb-3">Landing Page | Web Portfolio</h3>
+            <h3 class="font-semibold text-hitam text-xl mt-5 mb-3 dark:text-ijo text-center">Landing Page | Web Portfolio</h3>
 
-            <p class="font-medium text-base text-slate-500">Tools : Visual Studio Code</p>
-            <p class="font-medium text-base text-slate-500">Languages : HTML, CSS, Bootstrap</p>
+            <p class="font-medium text-base text-slate-500 dark:text-white">Tools : Visual Studio Code</p>
+            <p class="font-medium text-base text-slate-500 dark:text-white">Languages : HTML, CSS, Bootstrap</p>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="hidden overflow-x-hidden overflow-y-scroll fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+      <div class="relative w-auto my-6 mx-auto max-w-2xl">
+        <!--content-->
+        <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+          <!--header-->
+          <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+            <h3 class="text-3xl font-semibold">Final Project | Development Of Healthy Diet Food Recommendation Application</h3>
+            <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+              <span class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none"> × </span>
+            </button>
+          </div>
+          <!--body-->
+          <div class="relative p-6 flex-auto">
+            <img src="./public/img/project1.jpg" alt="abcd" width="w-full" />
+            <img src="./public/img/project1-1.jpg" alt="abcd" width="w-full" />
+          </div>
+          <!--footer-->
+          <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+            <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+              Close
+            </button>
+            <button
+              class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button"
+              onclick="toggleModal('modal-id')"
+            >
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+
     <!-- Portfolio end -->
 
     <!-- Skills Section Start -->
-    <section id="skills" class="bg-slate-800 pt-36 pb-32 dark:bg-slate-300">
+    <section id="skills" class="bg-white pt-36 pb-32 dark:bg-slate-900">
       <div class="container" data-aos="fade-up">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
-            <h4 class="mb-2 text-lg font-semibold text-ungu">Skills</h4>
-            <h2 class="mb-4 text-3xl font-bold text-hitam dark:text-dark sm:text-4xl lg:text-5xl">Development Tools That I Master</h2>
-            <p class="text-md font-medium text-slate-500 md:text-lg">Software that helps me work, Software is just a tool that makes a product useful depending on ideas, innovation and creativity.</p>
+            <h4 class="mb-2 text-lg font-semibold text-ungu dark:text-ijo">Skills</h4>
+            <h2 class="mb-4 text-3xl font-bold text-hitam dark:text-dark sm:text-4xl lg:text-5xl dark:text-white">Development Tools That I Master</h2>
+            <p class="text-md font-medium text-slate-500 md:text-lg dark:text-slate-400">Software that helps me work, Software is just a tool that makes a product useful depending on ideas, innovation and creativity.</p>
           </div>
         </div>
 
@@ -275,32 +370,32 @@
     <!-- Skills Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32 bg-white">
+    <section id="contact" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
       <div class="container" data-aos="fade-up">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-ungu">Contact</h4>
-            <h2 class="mb-4 text-3xl font-bold text-hitam sm:text-4xl lg:text-5xl">Email me</h2>
-            <p class="text-md font-medium text-secondary md:text-lg">Feel free to get in touch with me</p>
+            <h4 class="mb-2 text-lg font-semibold text-ungu dark:text-ijo">Contact</h4>
+            <h2 class="mb-4 text-3xl font-bold text-hitam sm:text-4xl lg:text-5xl dark:text-white">Email me</h2>
+            <p class="text-md font-medium text-secondary md:text-lg dark:text-slate-400">Feel free to get in touch with me</p>
           </div>
         </div>
 
         <form method="post" enctype="text/plain" action="mailto:daffanaufalf@gmail.com">
           <div class="w-full lg:mx-auto lg:w-2/3">
             <div class="mb-8 w-full px-4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
-              <label for="name" class="text-base font-bold text-ungu">Name</label>
+              <label for="name" class="text-base font-bold text-ungu dark:text-ijo">Name</label>
               <input type="text" id="name" name="name" class="w-full rounded-md bg-gradient-to-l from-fuchsia-100 to-indigo-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <div class="mb-8 w-full px-4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
-              <label for="email" class="text-base font-bold text-ungu">Email</label>
+              <label for="email" class="text-base font-bold text-ungu dark:text-ijo">Email</label>
               <input type="email" id="email" name="email" class="w-full rounded-md bg-gradient-to-l from-fuchsia-100 to-indigo-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
             </div>
             <div class="mb-8 w-full px-4" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
-              <label for="message" class="text-base font-bold text-ungu">Message</label>
+              <label for="message" class="text-base font-bold text-ungu dark:text-ijo">Message</label>
               <textarea type="text" id="message" name="message" class="h-32 w-full rounded-md bg-gradient-to-l from-fuchsia-100 to-indigo-100 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
             </div>
             <div class="w-full px-4" data-aos="zoom-in">
-              <button class="w-full rounded-full bg-ungu py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg" type="submit">Send</button>
+              <button class="w-full rounded-full bg-ungu py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg dark:bg-ijo dark:text-slate-800" type="submit">Send</button>
             </div>
           </div>
         </form>
@@ -309,29 +404,29 @@
     <!-- Contact Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-hitam pt-24 pb-12">
+    <footer class="bg-hitam pt-24 pb-12 dark:bg-slate-900">
       <div class="container" data-aos="fade-up">
         <div class="flex flex-wrap">
           <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/2">
-            <h2 class="mb-5 text-4xl font-bold text-white">Daffa</h2>
+            <h2 class="mb-5 text-4xl font-bold text-white dark:text-ijo">Daffa</h2>
             <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
-            <p><a href="mailto:daffanaufalf@gmail.com">daffanaufalf@gmail.com</a></p>
+            <p><a href="mailto:daffanaufalf@gmail.com" class="hover:text-ungu dark:hover:text-ijo">daffanaufalf@gmail.com</a></p>
             <p>Bandung</p>
           </div>
           <div class="mb-12 w-full px-4 md:w-1/2">
-            <h3 class="mb-5 text-xl font-semibold text-white">Links</h3>
+            <h3 class="mb-5 text-xl font-semibold text-white dark:text-ijo">Links</h3>
             <ul class="text-slate-300">
               <li>
-                <a href="#home" class="mb-3 inline-block text-base hover:text-ungu">Home</a>
+                <a href="#home" class="mb-3 inline-block text-base hover:text-ungu dark:hover:text-ijo">Home</a>
               </li>
               <li>
-                <a href="#about" class="mb-3 inline-block text-base hover:text-ungu">About Me</a>
+                <a href="#about" class="mb-3 inline-block text-base hover:text-ungu dark:hover:text-ijo">About Me</a>
               </li>
               <li>
-                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-ungu">Portfolio</a>
+                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-ungu dark:hover:text-ijo">Portfolio</a>
               </li>
               <li>
-                <a href="#contact" class="mb-3 inline-block text-base hover:text-ungu">Contact</a>
+                <a href="#contact" class="mb-3 inline-block text-base hover:text-ungu dark:hover:text-ijo">Contact</a>
               </li>
             </ul>
           </div>
@@ -340,7 +435,11 @@
         <div class="w-full border-t border-slate-700 pt-10">
           <div class="mb-5 flex items-center justify-center">
             <!-- LinkedIn -->
-            <a href="https://linkedin.com/in/daffanaufalf" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+            <a
+              href="https://linkedin.com/in/daffanaufalf"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+            >
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>LinkedIn</title>
                 <path
@@ -350,7 +449,11 @@
             </a>
 
             <!-- Instagram -->
-            <a href="https://instagram.com/daffanaufalf" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+            <a
+              href="https://instagram.com/daffanaufalf"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+            >
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -360,7 +463,11 @@
             </a>
 
             <!-- Twitter -->
-            <a href="https://twitter.com/daffanaufalf" target="_blank" class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+            <a
+              href="https://twitter.com/daffanaufalf"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+            >
               <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <title>Twitter</title>
                 <path
@@ -370,7 +477,11 @@
             </a>
 
             <!-- github  -->
-            <a href="https://github.com/Depakss" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white">
+            <a
+              href="https://github.com/Depakss"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-ungu text-ungu hover:border-ungu hover:bg-ungu hover:text-white dark:border-ijo dark:text-ijo dark:hover:bg-ijo dark:hover:border-ijo dark:hover:text-slate-900"
+            >
               <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" class="fill-current">
                 <title>GitHub</title>
                 <path
@@ -380,13 +491,18 @@
             </a>
           </div>
           <p class="text-center text-xs font-medium text-slate-500">
-            made with <span class="text-pink-500">❤️</span> by <a href="https://instagram.com/daffanaufalf" target="_blank" class="font-bold text-primary">Daffa Naufal Fakhrizi</a>, using
+            made with <span class="text-pink-500">❤️</span> by <a href="https://instagram.com/daffanaufalf" target="_blank" class="font-bold text-primary hover:text-ungu dark:hover:text-ijo">Daffa Naufal Fakhrizi</a>, using
             <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.
           </p>
         </div>
       </div>
     </footer>
     <!-- Footer End -->
+    <!-- Back to top Start -->
+    <a href="#home" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-ungu p-4 hover:animate-pulse dark:bg-ijo" id="to-top">
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2 dark:border-slate-900"></span>
+    </a>
+    <!-- Back to top End -->
 
     <script src="./public/js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
